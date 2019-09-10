@@ -15,7 +15,271 @@
 
 	<!-- Sidebar -->
 	<div id="estructuraPrincipal">
-		
+		<div id="sidebarChange">
+			<div id="sidebar" class=" closeS">
+				<div id="logoS">
+					<i id="x" class="fas fa-times pointer" onclick="ocultarSidebar();"c></i>
+					<a href="#"><img src="img/usuario.png" alt=""></a>
+				</div>
+	
+	
+				<!-- Menu del sidebar -->
+				
+				<div id="menu">
+					<ul>
+						<li><a href="#" onclick="vistaProgramacion();">Programación</a></li>
+						<li><a href="#" onclick="vistaGastos();">Gastos</a></li>
+						<li><a href="#" onclick="vistaEditarPerfil();">Editar mi perfil</a></li>
+						<li><a href="#" onclick="vistaGenerarReportes();">Generar reportes</a></li>
+						<li>
+							<a href="#subMenu">Gestionar Usuario</a>
+							<div id="subMenu">
+								<ul>
+									<li class="intMenu"><a href="#" onclick="vistaCrearUsuario();">Crear Usuario</a></li>
+									<li class="intMenu"><a href="#" onclick="vistaEditarUsuario();">Editar Usuario</a></li>
+									<li class="intMenu"><a href="#" onclick="vistaBloquearUsuario();">Bloquear Usuario</a></li>
+								</ul>
+							</div>
+							
+						</li>
+						<li>
+							<a href="#subMenu2">Gestionar Oficina</a>
+							<div id="subMenu2">
+								<ul>
+									<li class="intMenu"><a href="#" onclick="vistaCrearOficina();">Crear Oficina</a></li>
+									<li class="intMenu"><a href="#" onclick="vistaEditarOficina();">Editar Oficina</a></li>
+									<li class="intMenu"><a href="#" onclick="vistaBloquearOficina();">Bloquear Oficina</a></li>
+								</ul>
+							</div>
+						</li>
+						<li><a href="" onclick="cerrarSesion();">Cerrar Sesion</a></li>
+					</ul>
+				</div>
+	
+				<!-- Fin menu del sidebar -->
+				
+				<!-- redes sociales -->
+				
+				<div id="social">
+					<ul>
+						<li>
+							<a href="#">
+								<i class="fab fa-facebook"></i>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="fab fa-twitter"></i>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="fab fa-linkedin"></i>
+							</a>
+						</li>
+					</ul>
+					<div id="copyright">
+						Copyright &copy; All Rights Reserved
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="modal" class="modal oculto">
+			<div id="allModal">
+				
+				<div id="headModal" class="col-12">
+					<h6 id="cerrar" onclick="cerrarModal();" >X</h6>
+					<h3 class="tituloHM" style="color: white;">Auditorias</h3>
+				</div>
+				<div id="bodyModal" class="col-12 margenBM">
+					<table class="tabla table-sm table-responsive ">
+						<thead>
+							<tr class="colorFondoModal">
+								<th>Arqueo</th>
+								<th>Hora inicio</th>
+								<th>Hora fin</th>
+								<th>Auditado</th>
+								<th>Diferencia</th>
+								<th>Economica</th>
+								<th>Accion disciplinaria</th>
+								<th></th>
+								<th></th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><input class="arqueo form-control" type="text" value="1$ 001" disabled=""></td>
+								<td><input class="tamañoInpModal form-control" type="time" name="" ></td>
+								<td><input class="tamañoInpModal form-control" type="time" name="" ></td>
+								<td>
+									<select class="form-control">
+										<option value="0">Seleccione...</option>
+										<option value="1">Carlos Martinez</option>
+										<option value="2">Fernanda Oliveros</option>
+										<option value="3">Cristina Urueña</option>
+									</select>
+								</td>
+								<td><input class="diferencia form-control" type="text" name=""></td>
+								<td><button class="btn btn-outline-warning">$1-$150.000</button></td>
+								<td>
+									<select class="tamañoSelectModal form-control">
+										<option value="0">Seleccione...</option>
+										<option value="1">Acta de compromiso</option>
+										<option value="2">Acta de compromiso para colaborador e involucrados</option>
+										<option value="3">Reporte disciplinario</option>
+										<option value="4">Ninguna</option>
+									</select>
+								</td>
+								<td><button class="btn btn-outline-info"><i class="fas fa-save"></i></button></td>
+								<td><button class="btn btn-outline-success"><i class="fas fa-check"></i></button></td>
+							</tr>
+						</tbody>
+						<tfoot>
+							<tr>
+								<th></th>
+								<th></th>
+								<th></th>
+								<th></th>
+								<th><p class="diferencia letra">Si corresponde a un faltante adicionar el signo menos (-)</p></th>
+								<th></th>
+								<th></th>
+							</tr>
+						</tfoot>
+					</table>
+					<img class="imgAgregarModal" src="img/icono-agregar-png.png" alt="">
+				</div>
+				<!-- <div id="footerModal" class="col-12">
+					<p><b>PIE</b></p>
+				</div> -->
+			</div>
+		</div>
+		<div id="modalEditarAuditoria" class="modal oculto">
+			<div id="allModal">
+				
+				<div id="headModal" class="col-12">
+					<h6 id="cerrar" onclick="cerrarModalEditarAuditoria();" >X</h6>
+					<h3 class="tituloHM" style="color: white;">Editar Auditorias</h3>
+				</div>
+				<div id="bodyModal" class="col-12 margenBM">
+					<table class="tabla table-sm table-responsive ">
+						<thead>
+							<tr class="colorFondoModal">
+								<th>Arqueo</th>
+								<th>Hora inicio</th>
+								<th>Hora fin</th>
+								<th>Auditado</th>
+								<th>Diferencia</th>
+								<th>Economica</th>
+								<th>Accion disciplinaria</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><input class="arqueo form-control" type="text" value="1$ 001" disabled=""></td>
+								<td><input class="tamañoInpModal form-control" type="time" name="" ></td>
+								<td><input class="tamañoInpModal form-control" type="time" name="" ></td>
+								<td>
+									<select class="form-control">
+										<option value="0">Seleccione...</option>
+										<option value="1">Carlos Martinez</option>
+										<option value="2">Fernanda Oliveros</option>
+										<option value="3">Cristina Urueña</option>
+									</select>
+								</td>
+								<td><input class="diferencia form-control" type="text" name=""></td>
+								<td><button class="btn btn-outline-warning">$1-$150.000</button></td>
+								<td>
+									<select class="tamañoSelectModal form-control">
+										<option value="0">Seleccione...</option>
+										<option value="1">Acta de compromiso</option>
+										<option value="2">Acta de compromiso para colaborador e involucrados</option>
+										<option value="3">Reporte disciplinario</option>
+										<option value="4">Ninguna</option>
+									</select>
+								</td>
+								<td><button class="btn btn-outline-info"><i class="fas fa-save"></i></button></td>
+								<!-- <td><button class="btn btn-outline-success"><i class="fas fa-check"></i></button></td> -->
+								<td><button class="btn btn-outline-danger"><i class="fas fa-trash-alt"></i></button></td>
+							</tr>
+						</tbody>
+						<tfoot>
+							<tr>
+								<th></th>
+								<th></th>
+								<th></th>
+								<th></th>
+								<th><p class="diferencia letra">Si corresponde a un faltante adicionar el signo menos (-)</p></th>
+								<th></th>
+								<th></th>
+							</tr>
+						</tfoot>
+					</table>
+					<img class="imgAgregarModal" src="img/icono-agregar-png.png" alt="">
+				</div>
+				<!-- <div id="footerModal" class="col-12">
+					<p><b>PIE</b></p>
+				</div> -->
+			</div>
+		</div>
+		<div class="contenedor">
+			<div class="cabeza">
+				<div class="row col-12">
+					<div class="nombreProyecto col-4">
+						<img class="logo" src="img/W 3.png" alt="">
+					</div>
+					<div id="iconoAcutual" class="icono col-4">
+						<h2><i class="fas fa-building"></i></h2>
+					</div>
+					<div class="fotoPerfil col-4">
+						<h2><i onclick="mostrarSidebar();" class="fas fa-user-circle"></i></h2>
+					</div>
+				</div>
+			</div>
+			<div id="cuerpo" class="cuerpo row">
+				<div class="col-12">
+					<h2>AGREGAR PGA</h2>
+				</div>
+				<div id="proAgg" class="col-12">
+					<h4>Programa</h4>
+					<div class="">
+						<form action="">
+							<label for="">Codigo</label>
+							<input class="form-control" type="text">
+							<Label>Nombre del programa</Label>
+							<input class="form-control" type="text">
+						</form>
+					</div>
+					<button class="btn btn-outline-success"> AGREGAR </button>
+				</div>
+				<div class="col-12">
+					<h4>Concepto de Gasto</h4>
+					<div>
+						<form action="">
+							<label for="">Codigo</label>
+							<input class="form-control" type="text">
+							<label for="">Concepto de gasto</label>
+							<input class="form-control" type="text">
+						</form>
+					</div>
+					<button class="btn btn-outline-success">Agregar</button>
+				</div>
+				<div class="col-12">
+					<h4>Prefijo Arquero de Caja</h4>
+					<div>
+						<form action="">
+							<label for="">Prefijo de arqueo</label>
+							<input class="form-control" type="text" name="" id="">
+							<label for="">Documento del usuario</label>
+							<input class="form-control" type="text" name="" id="">
+						</form>
+					</div>
+					<button class="btn btn-outline-success">Agregar</button>
+				</div>
+			</div>
+			<div class="pie">
+				<b><small>&copy; Copyright 2019</small></b>
+			</div>
+		</div>
 	</div>
 	
 	<!-- INICIO DE LAS PLANTILLAS DE NAVEGACION -->
@@ -1240,5 +1504,5 @@
 <script src="js/select2.min.js"></script>
 <script src="js/modelo.js"></script>
 <script src="js/vista.js"></script>
-<script src="js/controlador.js"></script>
+<!-- <script src="js/controlador.js"></script> -->
 </html>
