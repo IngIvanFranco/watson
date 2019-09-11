@@ -1544,9 +1544,22 @@ button.{
 	margin-bottom: 30px;
 }
 
+.agregarPGA{
+	margin-top: 30px;
+	padding-left: 30px;
+	margin-bottom: 30px;
+}
+
 #proAgg h4,
-#concAgg h4,
+#concAgg h4{
+	margin-top: 15px;
+}
+
 #arqueAgg h4{
-	text-align: center;
+	margin-top: 38px;
+}
+
+.btnSpace{
+	margin-top: 20px;
 }
 
