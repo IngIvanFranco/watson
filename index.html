@@ -228,7 +228,7 @@
 						<img class="logo" src="img/W 3.png" alt="">
 					</div>
 					<div id="iconoAcutual" class="icono col-4">
-						<h2><i class="fas fa-building"></i></h2>
+						<h2><i class="fas fa-folder-plus"></i></h2>
 					</div>
 					<div class="fotoPerfil col-4">
 						<h2><i onclick="mostrarSidebar();" class="fas fa-user-circle"></i></h2>
@@ -236,45 +236,72 @@
 				</div>
 			</div>
 			<div id="cuerpo" class="cuerpo row">
-				<div class="agrgarPGA row">
+				<div class="agregarPGA row">
 					<div class="col-12">
 						<h2>AGREGAR PGA</h2>
 					</div>
 					<div id="proAgg" class="col-6">
 						<h4>Programa</h4>
 						<div class="">
-							<form action="">
-								<label for="">Codigo</label>
-								<input class="form-control" type="text">
-								<Label>Nombre del programa</Label>
-								<input class="form-control" type="text">
+							<form action="" class="row">
+								<div class="col-3">
+									<label for="">Codigo</label>
+								</div>
+								<div class="col-8">
+									<input class="form-control" type="text">
+								</div>
+								<br><br>
+								<div  class="col-3">
+									<Label>Nombre del programa</Label>
+								</div>
+								<div class="col-8">
+									<input class="form-control" type="text">
+								</div>
 							</form>
 						</div>
-						<button class="btn btn-outline-success"> AGREGAR </button>
+						<button class="btn btn-outline-success btnSpace"> Agregar </button>
 					</div>
 					<div id="concAgg" class="col-6">
 						<h4>Concepto de Gasto</h4>
 						<div>
-							<form action="">
-								<label for="">Codigo</label>
-								<input class="form-control" type="text">
-								<label for="">Concepto de gasto</label>
-								<input class="form-control" type="text">
+							<form action="" class="row">
+								<div class="col-3">
+									<label for="">Codigo</label>
+								</div>
+								<div class="col-8">
+									<input class="form-control" type="text">
+								</div>
+								<br><br>
+								<div  class="col-3">
+									<label for="">Concepto de gasto</label>
+								</div>
+								<div class="col-8">
+									<input class="form-control" type="text">
+								</div>
 							</form>
 						</div>
-						<button class="btn btn-outline-success">Agregar</button>
+						<button class="btn btn-outline-success btnSpace">Agregar</button>
 					</div>
 					<div id="arqueAgg" class="col-12">
 						<h4>Prefijo Arquero de Caja</h4>
 						<div>
-							<form action="">
-								<label for="">Prefijo de arqueo</label>
-								<input class="form-control" type="text" name="" id="">
-								<label for="">Documento del usuario</label>
-								<input class="form-control" type="text" name="" id="">
+							<form action="" class="row">
+								<div class="col-6">
+									<label for="">Prefijo de arqueo</label>
+									<input class="form-control" type="text" name="" id="">
+								</div>
+								<div class="col-6">
+									<label for="">Documento del usuario</label>
+									<select class="form-control" name="" id="">
+										<option value="0">Seleccione...</option>
+										<option value="1">15545113</option>
+										<option value="2">24846421</option>
+										<option value="3">34879464</option>
+									</select>
+								</div>
 							</form>
 						</div>
-						<button class="btn btn-outline-success">Agregar</button>
+						<button class="btn btn-outline-success btnSpace">Agregar</button>
 					</div>
 				</div>
 			</div>
