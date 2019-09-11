@@ -1544,6 +1544,9 @@ button.{
 	margin-bottom: 30px;
 }
 
-#proAgg {
+#proAgg h4,
+#concAgg h4,
+#arqueAgg h4{
 	text-align: center;
 }
+
