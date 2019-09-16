@@ -10,6 +10,7 @@
 *********************************************************/
 
 var vista = new Vista();
+var sesion = new Sesion();
 
 /***** FUNCIONES MANEJADORAS DE EVENTOS ****************/
 
