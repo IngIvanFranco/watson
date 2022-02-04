@@ -24,6 +24,8 @@
 	src: url("../fonts/Poppins-Medium.ttf");
 }
 
+.no-drop{cursor: no-drop;}
+
 /*__________________________________________
  |											|
  |				[PANTALLA] 					|
@@ -50,6 +52,26 @@
 	text-decoration: none;
 	color: #a64bf4;
 }
+
+.btn_validar{
+	color: #17A2B8;
+	background-color:white;
+	font-style: italic;
+	border: 1px solid #17A2B8;
+	border-radius: 10px;
+	padding: 10px;
+	cursor: pointer;
+	margin-left: 20px;
+	font-weight: bold;
+	outline: none;
+}
+
+.btn_validar:hover{
+color: white;
+background: #17A2B8;
+
+}
+
 
 /*.........................................................*/
 
@@ -80,7 +102,15 @@
 .inputLogin:-ms-input-placeholder{ color: #adadad; };
 
 /*======================================================================*/
-
+.tdes{
+	background-color: red;
+	color:white;
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 1.8rem;
+	font-style: italic;
+	text-decoration: none;
+}
 .buttonLoginA {
 	outline: none !important;
 	border: none;
@@ -114,21 +144,32 @@ iframe{
 	justify-content: center;
 	align-items: center;
 	padding: 15px;
-	background-image: url(../img/bg-01.jpg);
+	background: linear-gradient(to left,   #B132D5,#11B9C1 );	
+	/*background: linear-gradient(to left, #B132D5, #11B9C1 );*/
 	background-repeat: no-repeat;
 	background-size: cover;
     background-position: center center;
+	transition: all 2s;
+	
+}
+
+.fullscreen:hover{
+	
+	background-image: url(../img/bg-012.jpg);
+
 }
 
 /* wrap-login100 */
 .mainDrawer{
-	width: 500px;
+	width: 550px;
+	height: 90vh;
 	/*height: 625px;*/
-	background: white;
+	background: linear-gradient(to bottom,   rgba(255, 255, 255, 0.589), rgba(175, 175, 175, 0.411) );
 	opacity: 0.87;
-	border-radius: 10px;
+	border-radius: 100px 100px 100px 100px ;
 	overflow: hidden;
 	padding: 65px 55px 54px 55px;
+	border: solid white 2px;
 	/*margin: auto;*/
 }
 
@@ -147,7 +188,8 @@ iframe{
 	display: block;
 	font-family: Poppins-Bold;
 	font-size: 39px;
-	color: #333333;
+	font-style: italic;
+	color: #520e03;
 	line-height: 1.2;
 	text-align: center;
 	padding-bottom: 49px;
@@ -244,13 +286,14 @@ iframe{
 .drawerInput{
 	font-family: Poppins-Medium;
 	font-size: 16px;
-	color: #333333;
+	color: #000000;
 	line-height: 1.2;
 	display: block;
 	width: 100%;
 	height: 55px;
 	background: transparent;
 	padding: 0 7px 0 43px;
+	
 }
 
 /* focus-input100 */
@@ -276,7 +319,7 @@ iframe{
 .focusDrawer1::after{
 	content: "\f206";
 	font-family: Material-Design-Iconic-Font;
-	color: #adadad;
+	color: #4d4d4d;
 	font-size: 22px;
 
 	display: -webkit-box;
@@ -297,7 +340,7 @@ iframe{
 .focusDrawer2::after{
 	content: "\f191";
 	font-family: Material-Design-Iconic-Font;
-	color: #adadad;
+	color: #4d4d4d;
 	font-size: 22px;
 
 	display: -webkit-box;
@@ -526,14 +569,14 @@ iframe{
 ===============================================================================
 ===============================================================================*/
 
-*{
+/*{
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-}
+}*/
 
 body, html{
-	height: 100%;
+	/*height: 100%;*/
 	font-family: Poppins-Regular, sans-serif;
 }
 
@@ -543,30 +586,32 @@ div:focus{
 
 .contenedor{
 	width: 100%;
-	padding-top: 5px;
-	padding-left: 10px;
-	padding-right: 10px;
+	height: 100vh;
+	padding-top: 10px;
 	margin: 0;
 	/*display: -webkit-box;*/
 	/*display: -webkit-flex;*/
-	display: -moz-box;
+	/*display: -moz-box;*/
 	/*display: -ms-flexbox;*/
 	/*display: flex;*/
 	/*flex-wrap: wrap;*/
 	/*justify-content: center;*/
-	align-items: center;
+	/*align-items: center;*/
 	/*background-image: url("../img/Concrete-Texture-7_2048x.jpg");*/
 	background: silver;
-	background-repeat: no-repeat;
+	/*background-repeat: no-repeat;
 	background-size: cover;
-	background-position: center center;
+	background-position: center center;*/
 	/*background: #fff;*/
 }
 
 .cabeza{
+	height: 12%;
+	width: 98%;
+	margin-left: 1%;
 	line-height: 1.5;
 	align-content: center;
-	padding-top: 10px;
+	padding-top: 0.9%;
 	border: 1px solid #540F99;
 	color: #fff;
 	/*background: #FFF;*/
@@ -593,11 +638,11 @@ div:focus{
 }
 
 .logo{
-	width: 80px;
-	height: 65px;
-	margin-top: -5px;
+	width: 100px;
+	height: 75px;
+	margin-top: -25px;
 	margin-bottom: 5px;
-	/*box-shadow: 1px 1px 1px hsl(33, 42%, 40%), 2px 2px 0px hsl(33, 42%, 39%);*/
+	/*box-shadow: 1px 1px 1px hsl(33, 42%, 40%), 2px 2px 0px hsl(33, 42%, 39%);-*/
 }
 
 .icono{
@@ -611,10 +656,12 @@ div:focus{
 }
 
 .cuerpo{
+	height: 80.9%;
+	overflow: auto;
 	width: 85%;
 	background: #fff;
 	opacity: 0.9;
-	margin: 10px auto;
+	margin: 0.74% auto;
 	padding: 10px;
 	border: 3px solid #fff;
 	border-radius: 10px;
@@ -638,10 +685,12 @@ label{
 	border: solid #fff;
 }
 
-.auditoria:focus{
+.auditoriaSel{
 	outline: none !important;
+	text-align: center;
 	height: 100%;
 	width: 70%;
+	padding: 5px;
 	color: green;
 	border-bottom: 2px solid green;
 	border-top: 2px solid green;
@@ -713,10 +762,12 @@ label{
 	border: solid #fff;
 }
 
-.entregas:focus{
+.entregasSel{
 	outline: none !important;
 	height: 100%;
 	width: 70%;
+	padding: 5px;
+	text-align: center;
 	color: green;
 	border-bottom: 2px solid green;
 	border-top: 2px solid green;
@@ -768,10 +819,12 @@ label{
 	border: solid #fff;
 }
 
-.inspecciones:focus{
+.inspeccionesSel{
 	outline: none !important;
 	height: 100%;
 	width: 70%;
+	padding: 5px;
+	text-align: center;
 	color: green;
 	border-bottom: 2px solid green;
 	border-top: 2px solid green;
@@ -824,10 +877,12 @@ label{
 	border: solid #fff;
 }
 
-.visitaNoPlaneada:focus{
+.visitaNoPlaneadaSel{
 	outline: none !important;
 	height: 100%;
 	width: 70%;
+	padding: 5px;
+	text-align: center;
 	color: green;
 	border-bottom: 2px solid green;
 	border-top: 2px solid green;
@@ -888,6 +943,16 @@ label{
 	padding: 15px;
 }
 
+.proStyle{
+	color: #adadad;
+	text-align: center;
+	margin-top: 100px;
+}
+
+div .proStyle i {
+	font-size: 40px;
+}
+
 .espacioOpc{
 	margin-top: 15px;
 }
@@ -897,10 +962,10 @@ label{
 	margin-bottom: 15px;
 }
 
-button.{
+/* button.{
 	width: 39px;
 	height: 39px;
-}
+} */
 
 .botones{
 	float: none;
@@ -921,10 +986,45 @@ button.{
 	margin-bottom: 40px;
 }
 
-.tabla{
-	font-size: 15px;
+.tablaG{
+	font-size: 14px;
 	text-align: center;
 }
+
+.tamTabla{
+	/* width: 1100px; */
+	/* height: 100px; */
+	overflow-x: auto;
+}
+
+.tabla{
+	font-size: 14px;
+	text-align: center;
+	width: 1700px;
+	/* display: inline; */
+	/* justify-content: space around; */
+	/* overflow-x: auto; */
+}
+
+.tabla2{
+	font-size: 14px;
+	text-align: center;
+	width: 2561px;
+	/* display: inline; */
+	/* justify-content: space around; */
+	/* overflow-x: auto; */
+}
+
+.tablaModal{
+	font-size: 14px;
+	text-align: center;
+	
+	/* width: 1300px; */
+}
+
+
+
+
 
 @media (min-width: 292px) {
 	.programacionVisita{
@@ -993,10 +1093,6 @@ button.{
 	}
 }
 
-.tresD{
-
-}
-
 .colorFondo{
 	color: #fff;
 	background-color: #0A2FFF;
@@ -1004,6 +1100,15 @@ button.{
 	text-shadow: 0 1px 0 rgba(0,0,0,.5);
 	background-image: linear-gradient(#9933FF 10%,#7014CC 100%);
 }
+
+.colorFondoRep{
+	color: #fff;
+	background-color: #0A2FFF;
+  	box-shadow: 0 1px 0 rgba(255,255,255,.5) inset, 0 1px 3px rgba(0,0,0,.2);
+	text-shadow: 0 1px 0 rgba(0,0,0,.5);
+	background-image: linear-gradient(#b5b5b5 10%,#5a5a5a 100%);
+}
+
 
 .fondoColor{
 	color: #000;
@@ -1015,14 +1120,26 @@ button.{
 }
 
 .bordes{
-	padding: 5px;
+	/*padding: 5px;*/
 	border: 1px solid black;
+}
+
+.bordesRight{
+	padding: 5px;
+	border-right: 1px solid black;
 	border-collapse: collapse;
 }
 
+.bordesBottom{
+	border-bottom: 1px solid black;
+}
+
 .pie{
-	width: 101.5%;
-	margin-left: -10px;
+	bottom: 0;
+	height: 4%;
+	min-width: 100%;
+	max-width: 100%;
+	/*margin-left: -10px;*/
 	background: #000;
 	color: #fff;
 	text-align: center;
@@ -1046,17 +1163,40 @@ button.{
 	animation: modal 2s 1s forwards;
 	visibility: hidden;
 	opacity: 0;
+	overflow-x: auto;
 }
 
 #allModal{
 	margin: auto;
+	width: 80%;
+	max-height: 70%;
+	overflow-x: auto;
 	background: white;
 	border-radius: 10px;
 }
 
-#cerrar{
-	/*display: none;*/
+
+/* ::-webkit-scrollbar {
+      width: 8px;
 }
+
+::-webkit-scrollbar-track {
+	
+	background-color: red;
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: rgba(0, 0, 0, 0.2);
+}
+
+::-webkit-scrollbar-button {
+	background-color: navy;
+}
+
+::-webkit-scrollbar-corner {
+	width: 5px;
+	background-color: black;
+} */
 
 #cerrar{
 	position: absolute;
@@ -1120,6 +1260,7 @@ button.{
 
 #bodyModal{
 	background: white;
+	overflow-x: auto;
 }
 
 #footerModal{
@@ -1145,6 +1286,7 @@ button.{
 	width: 25px;
 	height: 25px;
 	border: 1px solid green;
+	cursor: pointer;
 }
 
 
@@ -1153,6 +1295,11 @@ button.{
 	text-align: center;
 	cursor: no-drop;
 	width: 80px;
+}
+
+.centrarBloq{
+	text-align: center;
+	cursor: no-drop;
 }
 
 .tamañoInpModal{
@@ -1266,12 +1413,12 @@ button.{
 	font-size: 18px;
 }
 
-.intMenu{/*
+/* .intMenu{
 	background: #000;
 	background-image: linear-gradient(#000 10%,#000 100%);
 	border-left: 4px solid #000;
-	border-right: 4px solid #000;*/
-}
+	border-right: 4px solid #000;
+} */
 
 #subMenu,#subMenu2{
 	background: #1A1A1A;
@@ -1339,7 +1486,7 @@ button.{
 
 .fa-linkedin:hover{
 	background: #37678D;
-	borde: 2px solid #37678D;
+	/* borde: 2px solid #37678D; */
 }
 
 #copyright{
@@ -1392,21 +1539,38 @@ button.{
 	box-shadow: 0 2px 3px 0 rgba(0,0,0,.2);
 }
 
+.imgEliminar{
+	width: 25px;
+	height: 25px;
+	border: 1px solid red;
+	cursor: pointer;
+	box-shadow: 0 2px 3px 0 rgba(0,0,0,.2);
+}
+
 .tablaPosition{
 	margin: auto;
 	position: static;
 	text-align: center;
-	padding-top: 30px;
-	padding-bottom: 31px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+#segundo{
+	margin: 0;
+	padding: 0;
+}
+
+#segundo::before{
+content: '$ ';
 }
 
 .btonConfGasto{
 	margin-top: 40px;
-	margin-left: 10px;
+	margin-left: 0;
 }
 
 .btnConf{
-	width: 99%;
+	width: 100%;
 }
 
 .fFin{
@@ -1415,8 +1579,8 @@ button.{
 
 
 .editarPerfil{
-	margin-top: 40px;
-	margin-bottom: 31px;
+	margin-top: 28px;
+	margin-bottom: 27px;
 }
 
 .formEdit{
@@ -1483,9 +1647,9 @@ button.{
 }
 
 .editarPerfilUsuario{
-	margin-top: 50px;
+	margin-top: 98px;
 	margin-left: 20px;
-	margin-bottom: 52px;
+	margin-bottom: 100px;
 }
 
 .editarPerfilOficina{
@@ -1508,7 +1672,6 @@ button.{
 
 .formEdicion{
 	margin-top: 106px;
-	margin-right: -20px;
 }
 
 .formEdicion input{
@@ -1530,7 +1693,7 @@ button.{
 
 .bloquearUsuario{
 	margin-top: 40px;
-	margin-bottom: 219px;
+	min-height: 100vh;
 }
 
 .bloquearOficina{
@@ -1545,9 +1708,9 @@ button.{
 }
 
 .agregarPGA{
-	margin-top: 30px;
+	margin-top: 25px;
 	padding-left: 30px;
-	margin-bottom: 30px;
+	margin-bottom: 21px;
 }
 
 #proAgg h4,
@@ -1563,3 +1726,20 @@ button.{
 	margin-top: 20px;
 }
 
+.mensaje{
+	color: #ca0505;
+}
+
+div.tablaDiv { display:table; }
+div.tablaDiv > form { display:table-row; }
+div.tablaDiv > form > div.cell { display:table-cell; }
+
+.positionLetter{
+	text-align: left;
+	margin-left: 20px;
+}
+
+.posBtn{
+	margin: auto;
+	left: 45px;
+}

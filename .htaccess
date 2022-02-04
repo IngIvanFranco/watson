@@ -1,0 +1,4 @@
+Options -Indexes
+RewriteEngine on
+RewriteCond %{REQUEST_URI} ^.*/10.0.102.248:9090/css/.*$
+RewriteRule .*$ http://10.0.102.248:9090
